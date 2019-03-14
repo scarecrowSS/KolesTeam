@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>New</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="revealator/fm.revealator.jquery.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="jrumble/js/jquery.jrumble.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="revealator/fm.revealator.jquery.min.js"></script>
+	<script src="js/viewportChecker.js"></script>
+	<script>
+		$(function(){
+		 	$('.jrumble').jrumble({
+		 		x: 1,
+		 		y: 1,
+		 		rotation: 1,
+		 		speed: 50
+		 	});
+		$('.jrumble').hover(function(){
+		$(this).trigger('startRumble');
+			}, function(){
+		$(this).trigger('stopRumble');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.slider').slick({
+		    	arrows: true		   
+   			});
+		});
+
+		$(function($){
+	
+		$(".cycler").css({"opacity":"1"});
+		$(".cycler").css({"filter":"blur(0px)"});
+
+		$(".cycler").viewportChecker({
+			callbackFunction:function(){
+				$(".cycler").css({"opacity":"1"});
+				
+			}
+			});
+		});
+
+
+		$(function($){		
+		$(".blur-img").viewportChecker({
+			callbackFunction:function(){
+				$(".blur-img").css({"filter":"blur(0px)"}).delay(10000).queue(function() {
+						$(this).css({"filter":"blur(5px)"}).dequeue();			
+					});				
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".s-1--container").slick({
+					arrows: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					edgeFriction: 0
+				})
+			}
+		})
+
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".s3__slider").slick({
+					arrows: true,
+					slidesToShow: 1,
+					slidesToScroll: 1
+				})
+			}
+		})
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".slicer").slick({
+					arrows: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					variableWidth: false,
+					edgeFriction: 0
+				})
+			}
+		})
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".s-1--dropper").removeClass("revealator-slideup revealator-once");
+			}
+		})
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".s-3--items").removeClass("revealator-slideup revealator-once");
+			}
+		})
+
+		$(document).ready(function() {
+			if ($(window).width() < 480) {
+				$(".s-5--items").removeClass("revealator-slideup revealator-once");
+			}
+		})
+
+	</script>
+</head>
+<body>
+
+	<header class="container-fluid">
+		<div class="hr__absolute"></div>
+		<div class="row hr--top justify-content-center">
+			<div class="col col-lg-4 col-md-5 col-12">
+				<div class="row hr--top--left">
+					<div class="col hr--logo"></div>
+					<div class="w-100"></div>
+					<p>Создание и продвижение<br/> сайтов под ключ</p>
+				</div>
+			</div>
+			<div class="col col-lg-4 col-md-5 col-12">
+				<div class="row hr--top--right justify-content-end">
+					<p>8(495) 123 45 67</p>
+					<div class="w-100"></div>
+					<a href="#">Написать руководителю</a>
+				</div>
+			</div>
+		</div>
+		<div class="row hr--mid justify-content-center no-gutters">
+			<div class="col col-lg-8 col-md-11">
+				<div class="row no-gutters">
+					<div class="col hr--mid--article"></div>
+					<div class="w-100"></div>
+					<p class="col">Гарантируем результат<br/> или вернем деньги</p>
+				</div>
+			</div>
+		</div>
+		<div class="row hr--bot justify-content-center align-items-end">
+			<div class="col col-md-8">
+				<div class="row justify-content-end global">
+					<form class="col-11 col-xl-6 col-lg-8 col-md-12" style="background: #dfe1e4;">
+						<div class="row justify-content-center " >
+							<p class="col col-12 hr-bot__par" style="font-size: 22px; line-height: 120%; color: #50535f; ">Получите <strong>бесплатно</strong><br/> первичную консультацию по конкурентности вашего рынка и расчет стоимости услуг</p>
+							<input type="text" class="col col-9" placeholder="Введите ваше имя" name="name">
+							<input type="text" class="col col-9" placeholder="Введите телефон" name="phone">
+							<input type="submit" class="col col-9" name="submit" value="Получить консультацию">
+							<p class="col col-12" style="font-size: 44px; font-weight: bold; color: #fba500">+ Бонус</p>
+							<p class="col col-12" style="font-size: 18px; text-transform: none; margin-top: -30px;">если у Вас уже есть сайт</p>
+							<p class="col col-12 hr-bot__par2" style="font-size: 32px; line-height: 120%;">Бесплатный SEO-аудит<br> вашего сайта</p>
+						</div>
+					</form>
+					<div class="w-100"></div>
+					<div class="col col-xl-6 col-lg-8 col-md-12 hr--bot--accept">
+						<div class="row no-gutters">
+							<label for="accept" class="col col-1"><input type="checkbox" id="accept" name="accept" checked="checked"><i></i></label>
+							<p class="col col-11">Нажимая на кнопку Вы даете согласие на обработку персональных данных и подтверждаете факт ознакомления с политикой конфиденциальности. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="s-1" class="container-fluid">
+			<div class="row s-1--head">
+				<h2 class="col">Преимущество работы с нами</h2>
+			</div>
+			<div class="row s-1--content justify-content-center">
+				<div class="col-12 col-md-12 foc">
+					<div class="row justify-content-center s-1--container">
+						<div class="col col-12 col-md-4 s-1--dropper revealator-slideup revealator-once">
+							<div class="s-1--item"></div>
+							<p>более <strong>10</strong> лет<br/> на рынке</p>
+						</div>
+						<div class="col col-12 col-md-4  s-1--dropper revealator-slideup revealator-once">
+							<div class="s-1--item"></div>
+							<p><strong>123</strong> проекта <br/> с разной степенью <br/> погружения</p>
+						</div>
+						<div class="col col-12 col-md-4  s-1--dropper revealator-slideup revealator-once">
+							<div class="s-1--item"></div>
+							<p><strong>12</strong> полностью<br/> реализованных<br/> проекта</p>
+						</div>
+						<!-- <div class="w-100 close"></div> -->
+						<div class="col col-12 col-md-4  s-1--dropper revealator-slideup revealator-once">
+							<div class="s-1--item"></div>
+							<p><strong>87%</strong> проектов<br/>  успешные и окупили<br/>  твои затраты</p>
+						</div>
+						<div class="col col-12 col-md-4  s-1--dropper revealator-slideup revealator-once">
+							<div class="s-1--item"></div>
+							<p><strong>176%</strong> средний roi<br/> показатель<br/> за первые 3 месяца</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="s-2" class="container-fluid">
+			<div class="row s-2--head">
+				<h2 class="col revealator-slideup revealator-once">Меры по привлечению клиентов в компанию</h2>
+			</div>
+			<div class="size">
+				<div class="s-2--left ">
+					<img src="img/greycask.png" class="s-2--item revealator-slideup revealator-once" id="b1" style="right: -30px; top: 100px;" alt="cask">
+					<img src="img/arrow1.png" class="s-2--item jrumble revealator-slideup revealator-once" id="b2" style="left: 0; top: 190px;" alt="arrow">
+					<img src="img/arrow2.png" class="s-2--item jrumble revealator-slideup revealator-once" id="b3" style="left: 140px; top: 40px;" alt="arrow">
+					<img src="img/arrow3.png" class="s-2--item jrumble revealator-slideup revealator-once" id="b4" style="left: 100px; top: 380px;" alt="arrow">
+					<img src="img/arrow4.png" class="s-2--item jrumble revealator-slideup revealator-once" id="b5" style="left: 310px; top: 470px;" alt="arrow">
+				</div>
+				<div class="s-2--right">
+					<p class="stea">Как привлекаем<br/> клиентов мы</p>
+					<img src="img/redcask.png" class="s-2--item revealator-slideup revealator-once" style="left: 10px; top: 280px;" alt="cask" id="n1">
+					<img src="img/arrow5.png" class="s-2--item jrumble revealator-slideup revealator-once" style="right: 40px; top: -40px;" alt="arrow" id="n2">
+					<img src="img/arrow6.png" class="s-2--item jrumble revealator-slideup revealator-once" style="right: 0px; top: 350px;" alt="arrow" id="n3">
+					<img src="img/arrow7.png" class="s-2--item jrumble revealator-slideup revealator-once" style="right: 100px; top: 530px;" alt="arrow" id="n4">
+					<img src="img/arrow8.png" class="s-2--item jrumble revealator-slideup revealator-once" style="right: 210px; top: 600px;" alt="arrow" id="n5">
+				</div>
+			</div>
+			<p class="revealator-slideup revealator-once">*Исследование основано на статистических данных по России.</p>
+		</section>
+		<section id="s-3" class="container-fluid">
+			<div class="row s-3--head">
+				<h2 class="col revealator-slideup revealator-once">Мы знаем 137 вариаций <br/>
+				стратегий продвижения и применения инструментов<br/>
+				при продвижении товаров и услуг.<br/>
+				Мы выделили 5 самых эффективных и популярных из них
+				</h2>
+			</div>
+			<div class="row justify-content-center s-3--content">
+				<div class="col col-xl-11 col-lg-11 col-md-11 s-3--container">
+					<div class="row justify-content-between align-items-end s3__slider">
+						<div class="col col-md-2 s-3--item1 s-3--items col-12 revealator-slideup revealator-once col__direct">
+							<div class="items--head">
+								<div class="number first" style="background-position: 30px 145px"></div>
+							</div>
+							<p>Изучение рынка</p>
+							<p>Составление оффера</p>
+							<p>Разработка сайта</p>
+							<p>Кампания в я.директе</p>
+						</div>
+						<div class="col col-md-2 s-3--item2 s-3--items col-12 revealator-slideup revealator-once col__direct">
+							<div class="items--head">
+								<div class="number second" style="background-position: -185px 225px"></div>
+							</div>
+							<p>Изучение рынка</p>
+							<p>Составление оффера</p>
+							<p>Разработка сайта</p>
+							<p>Кампания в я.директе</p>
+							<p>SMM двух соцсетей</p>
+						</div>
+						<div class="col col-md-2 s-3--item3 s-3--items col-12 revealator-slideup revealator-once col__direct">
+							<div class="items--head">
+								<div class="number third" style="background-position: -415px 310px"></div>
+							</div>
+							<p>Изучение рынка</p>
+							<p>Составление оффера</p>
+							<p>Разработка сайта</p>
+							<p>Кампания в я.директе</p>
+							<p>Кампания в Google Adwords</p>
+							<p>SMM 3-х соцсетей</p>
+						</div>
+						<div class="col col-md-2 s-3--item4 s-3--items col-12 revealator-slideup revealator-once">
+							<div class="items--head">
+								<div class="number fourth" style="background-position: -650px 380px"></div>
+							</div>
+							<p>Полноценное маркетинговое исследование рынка</p>
+							<p>Анализ конкурентов и их продуктов</p>
+							<p>Составление 2-х офферов и А Б тестирование</p>
+							<p>Индивидуальный дизайн с лучшими дизайнерами</p>
+							<p>SEO оптимизация</p>
+							<p>Кампания в я.директе</p>
+							<p>Кампания в Google Adwords</p>
+							<p>SMM 4-х соцсетей</p>
+						</div>
+						<div class="col col-md-2 s-3--item5 s-3--items col-12 revealator-slideup revealator-once">
+							<div class="items--head">
+								<div class="number fifth" style="background-position: -880px 450px"></div>
+							</div>
+							<p>Полноценное маркетинговое исследование рынка</p>
+							<p>Анализ конкурентов и их продуктов</p>
+							<p>Составление 2-х офферов и А Б тестирование</p>
+							<p>Индивидуальный дизайн с лучшими дизайнерами</p>
+							<p>SEO оптимизация</p>
+							<p>Кампания в я.директе</p>
+							<p>Кампания в Google Adwords</p>
+							<p>SMM 5 соцсетей</p>
+						</div>
+					</div>
+					<div class="row justify-content-between align-items-center" style="box-sizing: border-box;">
+						<div class="col col-md-2 s-3--buttons revealator-slideup revealator-once">
+							<a href="#">Узнать подробнее</a>
+						</div>
+						<div class="col col-md-2 s-3--buttons revealator-slideup revealator-once">
+							<a href="#">Узнать подробнее</a>
+						</div>
+						<div class="col col-md-2 s-3--buttons revealator-slideup revealator-once">
+							<a href="#">Узнать подробнее</a>
+						</div>
+						<div class="col col-md-2 s-3--buttons revealator-slideup revealator-once">
+							<a href="#">Узнать подробнее</a>
+						</div>
+						<div class="col col-md-2 s-3--buttons revealator-slideup revealator-once">
+							<a href="#">Узнать подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row s-3--head color__white">
+				<h3 class="col revealator-slideup revealator-once">Подберите цену под себя
+				</h3>
+				<div class="w-100"></div>
+				<h4 class="col revealator-slideup revealator-once">Разработать стратегию продвижения, оптимальную для вас
+				</h4>
+			</div>
+			<div class="row s-3--bot justify-content-center revealator-slideup revealator-once">
+				<form class="col col-lg-7 col-md-10">
+					<div class="row align-items-center" style="height: 100%;">
+						<div class="col col-md-4 col-12 s-3--input">
+							<input type="text" name="name" placeholder="Введите Ваше имя">
+						</div>
+						<div class="col col-md-4 col-12 s-3--input">
+							<input type="text" name="phone" placeholder="Введите телефон">
+						</div>
+						<div class="col col-md-4 s-3--input">
+							<input type="submit" name="submit" value="Подобрать стратегию продвижения">
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section id="s-4" class="container-fluid">
+			<div class="row s-4--head">
+				<h2 class="col revealator-slideup revealator-once">Факторы, влияющие<br/> на стоимость и сроки продвижения продукта</h2>
+			</div>
+			<div class="row s-4--content">
+				<div class="col col-md-12">
+					<div class="row" style="height: 100%; position: relative;">
+						<div class="col col-md-6 col-12 s-4--container s-4--left revealator-slideright revealator-once">
+							<div class="cycler cyc-left"></div>
+							<p style="margin-right: 170px;" id="m1">Оптимизация <br/>стоимости</p>
+							<p style="margin-right: 140px;" id="m2">Грамотный <br/>оффер</p>
+							<p style="margin-right: 110px;" id="m3">Коммерческие <br/>факторы</p>
+							<p style="margin-right: 70px;" id="m4">Соответствие <br/>ожиданиям</p>
+							<p style="margin-right: 30px;" id="m5">Привлечение целевого трафика</p>
+							<p style="margin-right: 20px;" id="m6">Явное конкурентное<br/>преимущество</p>
+							<p style="margin-right: 100px;" id="m7">Переход<br/>в свободную нишу</p>
+						</div>
+						<div class="col col-md-6 col-12 s-4--container s-4--right revealator-slideleft revealator-once">
+							<div class="cycler cyc-right"></div>
+							<p style="margin-left: 100px;" id="o1">Высокая цена</p>
+							<p style="margin-left: 130px;" id="o2">Неочевидная польза</p>
+							<p style="margin-left: 160px;" id="o3">Высокая конкуренция</p>
+							<p style="margin-left: 210px;" id="o4">Неизвестный<br/> продукт</p>
+							<p style="margin-left: 250px;" id="o5">Неудобное<br/> место расположения</p>
+							<p style="margin-left: 230px;" id="o6">Низкая<br/> маржинальность</p>
+						</div>
+						<div class="vertical revealator-slideup revealator-once">
+							<p>П</p>
+							<p>р</p>
+							<p>о</p>
+							<p>д</p>
+							<p>у</p>
+							<p>к</p>
+							<p>т</p>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			<div class="row s-4--head">
+				<h3 class="col revealator-slideup revealator-once">мы способны<strong> влиять</strong> на все факторы продвижения</h3>
+			</div>
+		</section>
+		<section id="s-5" class="container-fluid">
+			<div class="row s-5--head">
+				<h2 class="col revealator-slideup revealator-once">Обязательные мероприятия<br/> для успешного продвижения продукта</h2>
+			</div>
+			<div class="row justify-content-center s-5--content">
+				<div class="col col-xl-9 col-lg-11 col-md-11">
+					<div class="row justify-content-between slicer">
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items revealator-slideup revealator-once">
+							<h3>Сбор<br/> информации</h3>
+							<p>об объемах и специфике рынка</p>
+							<p>о лидерах рынка, их продуктах </p>
+							<p>и выбранных стратегиях продвижения</p>
+							<div class="s-5--number" style="background-position: 0px -15px" id="l1"></div>
+						</div>
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items target revealator-slideup revealator-once">
+							<h3>Выбор<br/> стратегии</h3>
+							<p>выбор канала для получения максимально релевантного трафика (сайт, соц.сети, реклама)</p>
+							<p>составление семантического ядра</p>
+							<p> выбор инструментария, учитывая бюджет</p>
+							<div class="s-5--number" id="l2"></div>
+						</div>
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items revealator-slideup revealator-once">
+							<h3>Разработка<br/> площадки</h3>
+							<p>сайты, соц.сети, спец. План</p>
+							<p>наполнение контентом (тексты, информация, картинки) в соответствии с разработанным семантическим ядром</p>
+							<div class="s-5--number"  id="l3"></div>
+						</div>
+	
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items six revealator-slideup revealator-once">
+							<h3>Сопровождение</h3>
+							<p>контроль за эффективностью рекламных кампаний</p>
+							<p>перераспределения средств на более эффективные каналы</p>
+							<div class="s-5--number"  id="l4"></div>
+						</div>
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items target five revealator-slideup revealator-once">
+							<h3>Запуск<br/> площадок</h3>
+							<p>размещение на хостингах и привязка доменного имени</p>
+							<p>запуск аккаунтов в соц. сетях</p>
+							<p>запуск рекламных кампаний для привлечения трафика</p>
+							<div class="s-5--number" id="l5"></div>
+						</div>
+						<div class="col col-10 col-md-5 col-lg-3 col-xl-3 s-5--items four revealator-slideup revealator-once">
+							<h3>Техническое<br/> соответствие</h3>
+							<p>наполнение площадок коммерческими факторами</p>
+							<p>приведение площадок в техническое соответствие для адекватной работы с поисковыми системами</p>
+							<div class="s-5--number"  id="l6"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="s-6" class="container-fluid">
+			<div class="row s-6--head">
+				<h2 class="col revealator-slideup revealator-once">3 причины, почему стоит выбрать нас</h2>
+			</div>
+			<div class="row justify-content-center s-6--content">
+				<div class="col col-lg-10 col-xl-8 col-md-11 s-6--container">
+					<div class="s-6--item">
+						<div class="s-6--number" style="background-position: 0px 0px;"></div>
+						<div class="s-6--text s-6--left revealator-slideup revealator-once">
+							<h3>Гарантия результата</h3>
+							<p>Мы вернем деньги если не справимся. Статистика наших успешных проектов составляет 87%. Если мы не уверенны, что проект будет успешным или бюджет не соответствует требованиям заказчика, то мы не беремся за проект </p>
+						</div>
+					</div>
+					<div class="s-6--item">
+						<div class="s-6--text s-6--right revealator-slideup revealator-once">
+							<h3>Команда профессионалов</h3>
+							<p>Одно из главных правил, если не самое главное, по которому живет наша компания – не экономить на кадрах и сотрудничать только с профи. Наша команда. </p>
+						
+						</div>
+						<div class="s-6--number tar" style="background-position: -650px 435px;"></div>
+					</div>
+					<div class="s-6--item">
+						<div class="s-6--number" style="background-position: 830px 188px;"></div>
+						<div class="s-6--text s-6--left revealator-slideup revealator-once">
+							<h3>Дешевая цена</h3>
+							<p>У нас одна из самых дешевых цен на рынке среди профессиональных команд. Так уж сложилось, что в среде тех, кто занимается он-лайн продвижением много школьников, не профессионалов и просто мошенников. Их мы в расчет не берем. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="s-7" class="container-fluid">
+			<div class="row s-7--head">
+				<h2 class="col">Наши клиенты</h2>
+			</div>
+			<div class="row justify-content-center ">
+				<div class="col slider col-lg-9 col-md-10 ">
+					<div class="slide">
+						<div class="row flexi revealator-slideup revealator-once" style="width: 100%">
+							<div class="col col-lg-4 col-xl-2 col-md-4 slider--photo col-12">
+								<div></div>
+								<p>Иванов Иван</p>
+							</div>
+							<div class="col-12 col-lg-4 col-xl-5 col-md-4 slider--text col-6">
+								<h3>На старте:</h3>
+								<p>10 клиентов в неделю</p>
+								<p>Средний чек 3000р</p>
+								<p>Ср. время нахождения на сайте – 5 сек. </p>
+							</div>
+							<div class="col-12 col-lg-4 col-xl-5 col-md-4 slider--text col-6">
+								<h3>Через 4 месяца:</h3>
+								<p>250 клиентов в неделю</p>
+								<p>средний чек 4500р</p>
+								<p>ср. время нахождения на сайте – 17 сек. </p>
+							</div>
+						</div>
+						<hr/>
+						<div class="row revealator-slideup revealator-once del" style="width: 100%;">
+							<div class="col slider--content">
+								<h3>Иванов Иван</h3>
+								<p>Генеральный директор<br/> сети магазинов цветов “Цветочка”</p>
+								<p><em style="line-height: 160%;">«Мы не ожидали такого результата: наша компания перешла на качественно новый уровень. Ребята молодцы, сделали все как обещали»</em></p>
+							</div>
+							<div class="col slider--content">
+								<h3>Были выполнены следующие мероприятия:</h3>
+								<p>Полностью переработано семантическое ядро запросов </p>
+								<p>Создали новый сайт с нуля</p>
+								<p>Запущенны страница в Instagramme</p>
+								<p>Сайт оптимизирован по SEO</p>
+								<p>Добавлены коммерческие факторы</p>
+							</div>
+						</div>
+						<div class="s-7--image revealator-slideup revealator-once">
+							<a href="#">flowerpoint.ru</a>
+							<div></div>
+						</div>
+						<input type="button" name="button" value="Свернуть">
+					</div>
+					<div class="slide">
+						<div class="row flexi revealator-slideup revealator-once" style="width: 100%">
+							<div class="col col-lg-4 col-xl-2 col-md-4 slider--photo col-12">
+								<div></div>
+								<p>Иванов Иван</p>
+							</div>
+							<div class="col-12 col-lg-4 col-xl-5 col-md-4 slider--text col-6">
+								<h3>На старте:</h3>
+								<p>10 клиентов в неделю</p>
+								<p>Средний чек 3000р</p>
+								<p>Ср. время нахождения на сайте – 5 сек. </p>
+							</div>
+							<div class="col-12 col-lg-4 col-xl-5 col-md-4 slider--text col-6">
+								<h3>Через 4 месяца:</h3>
+								<p>250 клиентов в неделю</p>
+								<p>средний чек 4500р</p>
+								<p>ср. время нахождения на сайте – 17 сек. </p>
+							</div>
+						</div>
+						<hr/>
+						<div class="row revealator-slideup revealator-once del" style="width: 100%;">
+							<div class="col slider--content">
+								<h3>Иванов Иван</h3>
+								<p>Генеральный директор<br/> сети магазинов цветов “Цветочка”</p>
+								<p><em style="line-height: 160%;">«Мы не ожидали такого результата: наша компания перешла на качественно новый уровень. Ребята молодцы, сделали все как обещали»</em></p>
+							</div>
+							<div class="col slider--content">
+								<h3>Были выполнены следующие мероприятия:</h3>
+								<p>Полностью переработано семантическое ядро запросов </p>
+								<p>Создали новый сайт с нуля</p>
+								<p>Запущенны страница в Instagramme</p>
+								<p>Сайт оптимизирован по SEO</p>
+								<p>Добавлены коммерческие факторы</p>
+							</div>
+						</div>
+						<div class="s-7--image revealator-slideup revealator-once">
+							<a href="#">flowerpoint.ru</a>
+							<div></div>
+						</div>
+						<input type="button" name="button" value="Свернуть">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="s-8" class="container-fluid">
+			<div class="row s-8--head">
+				<h2 class="col revealator-slideup revealator-once">Наши услуги</h2>
+				<h3 class="col-12 revealator-slideup revealator-once">В рамках наших комплексов работ по продвижению <br/> продукции мы можем оказывать следующие услуги: </h3>
+			</div>
+			<div class="row s-8--content justify-content-center">
+				<div class="col col-lg-8 col-md-11">
+					<div class="row">
+						<div class="col-md-4  revealator-slideup revealator-once">
+							<div class="row justify-content-center">
+								<div class="col-12 headline"><p>SEO</p></div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SEO за 29</p>
+									<p class="s-8--items__bot">(пакет услуг от 29000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SEO за 49</p>
+									<p class="s-8--items__bot">(пакет услуг от 49000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SEO за 149</p>
+									<p class="s-8--items__bot">(пакет услуг от 149000 рублей/мес)</p>
+								</div>
+							</div>
+						
+						</div>
+						<div class="col-md-4  revealator-slideup revealator-once">
+							<div class="row justify-content-center">
+								<div class="col-12 headline"><p>SERM</p></div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SERM за 29</p>
+									<p class="s-8--items__bot">(пакет услуг от 29000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SERM за 69</p>
+									<p class="s-8--items__bot">(пакет услуг от 69000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">SERM за 149</p>
+									<p class="s-8--items__bot">(пакет услуг от 149000 рублей/мес)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4  revealator-slideup revealator-once">
+							<div class="row justify-content-center">
+								<div class="col-12 headline headline__low"><p>Контекстная реклама</p></div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">Контекст за 19</p>
+									<p class="s-8--items__bot">(пакет услуг от 19000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">Контекст за 39</p>
+									<p class="s-8--items__bot">(пакет услуг от 39000 рублей/мес)</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light">
+									<p class="s-8--items__top">Контекст за 69</p>
+									<p class="s-8--items__bot">(пакет услуг от 69000 рублей/мес)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4  revealator-slideup revealator-once">
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light changed">
+									<p class="s-8--items__top ">Комплексный маркетинг</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-md-4  revealator-slideup revealator-once">
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-11 s-8--items light changed">
+									<p class="s-8--items__top ">Услуги по композициям</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-12 revealator-slideup revealator-once justify-content-end download flow">
+							<a href="#">Скачать прайс>>></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="container-fluid">
+		<div class="row foot--head">
+			<h2 class="col revealator-slideup revealator-once">Наши координаты</h2>
+		</div>
+		<div class="blur-img"></div>
+		<div class="row justify-content-center">
+
+			<div class="col col-lg-10 col-xl-8 col-md-10">
+				<div class="row justify-content-center over" >
+					<div class="col col-12 col-xl-7 col-lg-12 col-md-12 foot--items with-map">
+						<div class="row">
+							<p class="col col-12 revealator-slideup revealator-once">Москва, ул. Мещанская, д. 9/1, корп. 1. </p>
+							<p class="col col-12 revealator-slideup revealator-once">+7 (455) 799 -05-03</p>
+							<p class="col col-12 revealator-slideup revealator-once">info@koles.team</p>
+							<p class="col col-12 revealator-slideup revealator-once">skype: koles.team</p>
+							<a class="col col-12" href="https://yandex.ru/maps/?um=constructor%3A890e931b33807c6f178786d1728a26b6c8e3d2de8bf4cdcc918e727dc4584a41&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A890e931b33807c6f178786d1728a26b6c8e3d2de8bf4cdcc918e727dc4584a41&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="map" style="border: 0;" /></a>
+						</div>
+					</div>
+					<div class="col col-12 col-xl-5 col-lg-6 col-md-12 foot--items with-form">
+						<div class="row  align-items-end" style="height: 100%;">
+							<div class="col col-12">
+								<h3>Остались вопросы?</h3>
+								<div class="row" style="height: 100%;">
+									<form class="col col-12">
+										<div class="row justify-content-center ">
+											<input class="col col-10" type="text" name="name" placeholder="Введите ваше имя">
+											<input class="col col-10" type="text" name="phone" placeholder="Введите телефон">
+											<textarea class="col col-10" placeholder="Вопрос"></textarea>
+											<input class="col col-8" type="submit" name="submit" value="Получить консультацию">
+											<div class="w-100"></div>
+											<label for="accept_2" class="col col-1"><input type="checkbox" id="accept_2" name="accept" checked="checked"><i></i></label>
+											<p class="col col-9">Нажимая на кнопку Вы даете согласие на обработку персональных данных и подтверждаете факт ознакомления с политикой конфиденциальности. </p>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
